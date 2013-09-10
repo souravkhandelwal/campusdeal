@@ -1,0 +1,56 @@
+.myitem {
+	overflow:hidden;
+	margin:10px;
+	padding:10px;
+}
+
+#itemlist {
+	border:#EEE 3px solid;
+	margin-left:10px;
+	margin-bottom:10px;
+	width:600px;
+	overflow:auto;
+	float:left;
+}
+
+#bidlist {
+	border:#EEE 3px solid;
+	width:320px;
+	float:left;
+}
+
+#bidlist_title {
+	font-size:25px;
+	font-weight:bold;
+	color:#006295;
+	padding-left:20px;
+	width:300px;
+	border-bottom:#006295 3px solid;
+}
+
+.placed_bid {
+	margin:10px;	
+}
+
+.myitem_image {
+	float:left;
+	border-right:#EEE 3px solid;
+	padding-right:10px;
+}
+
+.myitem_rest {
+	padding-left:10px;
+	float:left;
+	width:150px;
+}
+
+.myitem_title {
+	font-size:20px;
+	color:#000;
+	font-weight:bold;
+}
+
+.myitem_baseprice {
+	font-size:20px;
+	font-weight:bold;
+}

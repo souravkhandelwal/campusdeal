@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>IITK Bazaar</title>
+	<link href="{{ STATIC_URL }}css/stylesheet.css" rel="stylesheet" type="text/css" />
+	<link href="{{ STATIC_URL }}css/register.css" rel="stylesheet" type="text/css" />
+	<link href="{{ STATIC_URL }}css/myitems.css" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="{{ STATIC_URL }}logo_small.png" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.js"></script>
+
+</head>
+<body>
+	<script type="text/javascript" src="{{ STATIC_URL }}css/myitems.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}css/userinfo.js"></script>
+	<div id="main_container">
+		<div id="top_div">
+			<div id="name"><img src="{{ STATIC_URL }}logo.png" width="200" height="50"/></div>
+			<div id="links"> <span class="link"> <a href="/campusdeal/home" style="text-decoration:none">Home</a> </span> <span class="link"> <a href="/campusdeal/myitems/static" style="text-decoration:none">My Items</a> </span><span class="link"><a href="/campusdeal/mybids" style="text-decoration:none">Bidded Items</a> </span><span class="link"> <a href="/campusdeal/logout/" style="text-decoration:none">Logout</a></span> </div>
+		</div>
+		<img src="{{ STATIC_URL }}bazaar.png" width="900" height="350" style="margin-left:50px;"/>
+		<div id="middle_div">
+			<div id="recent_activity"> <!--recent activity-->
+				<div id="recent_activity_title">My Items <a href="/campusdeal/add_item/" style="text-decoration:none">[Add an Item]</a></div>
+				<div id="itemlist"> 
+					<!--div class="myitem">
+						<div class="myitem_image"><img src="cycle.jpg" width="100" height="100"></div>
+						<div class="myitem_rest"> 
+							<div class="myitem_title">Hero Cycle</div>
+							<div class="myitem_baseprice">BasePrice : 290</div>
+							<div class="myitem_category">Category : <a href="cycle.html">cycle</a></div>
+						</div>
+					</div>
+					<div class="line"> <hr /> </div>
+					<div class="myitem">
+						<div class="myitem_image"><img src="cycle.jpg" width="100" height="100"></div>
+						<div class="myitem_rest"> 
+							<div class="myitem_title">Hero Cycle</div>
+							<div class="myitem_baseprice">BasePrice : 290</div>
+							<div class="myitem_category">Category : <a href="cycle.html">cycle</a></div>
+						</div>
+					</div-->
+				</div>
+				<div id="bidlist">
+					<div id="bidlist_title">Bids placed for this item</div>
+					<div style="overflow:auto">
+					<!--div class="placed_bid">
+						<input type="radio" id="radio_bid_button1" name="radio_bid_button" value="mprateek">Prateek Mishra bid with Rs 300
+					</div>
+					<div class="placed_bid">
+						<input type="radio" id="radio_bid_button2" name="radio_bid_button" value="mprateek">Prateek Mishra bid with Rs 300
+					</div>
+					<div class="placed_bid">
+						<input type="radio" id="radio_bid_button3" name="radio_bid_button" value="mprateek">Prateek Mishra bid with Rs 300
+					</div>
+					<div class="placed_bid">
+						<input type="radio" id="radio_bid_button4" name="radio_bid_button" value="mprateek">Prateek Mishra bid with Rs 300
+					</div>
+					<div class="placed_bid">
+						<input type="radio" id="radio_bid_button5" name="radio_bid_button" value="mprateek">Prateek Mishra bid with Rs 300
+					</div-->	
+					</div>
+					<input type="button" id="sell_button" value="Sell" class="submit" style="margin-left:120px;padding-left:20px;padding-right:20px;" />
+				</div>
+			</div>
+		</div>
+		<div class="bottom_div">
+			<img src="{{ STATIC_URL }}logo.png"	width="200" height="50" id="bottom_div_img" />
+			<span id="bottom_div_span"> <a href="index.html" class="bottom_div_link">Home</a> | <a href="aboutus.html"class="bottom_div_link">About Us</a></span>
+		</div>
+	</div>
+</body>
+</html>

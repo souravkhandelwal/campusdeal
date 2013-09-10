@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title>IITK Bazaar</title>
+	<link href="{{STATIC_URL}}css/stylesheet.css" rel="stylesheet" type="text/css" />
+	<link href="{{STATIC_URL}}css/login.css" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="{{STATIC_URL}}logo_small.png" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.js"></script>
+
+</head>
+<body bgcolor="Silver">
+	<script type="text/javascript" src="{{STATIC_URL}}css/login.js"></script>
+	<div id="main_container">
+
+		<div id="top_div">
+			<div id="name"><img src="{{STATIC_URL}}logo.png" width="200" height="50"/></div>
+
+			{% if err == "login_error" %}
+                <script language="javascript" type="text/javascript">alert("Your CC login and password mismatch!");</script>
+            {% endif %}	
+			<div id="links"> 
+			
+			<div id="login-button">
+				<span class="link login-link"> Login </span> 
+				<span class="login-box">
+				<form id="user-login-form" method="post" accept-charset="UTF-8" action="/campusdeal/home/">
+                {% csrf_token %}
+					<div>
+						<div class="login-label">
+							<span>Username (New User?<a href="/campusdeal/register/">Signup</a>&#41;</span><span>Password</span>
+				        </div>
+				        <div id="edit-name-11-wrapper" class="form-item">
+							<input type="text" class="form-text required input" value="" size="17" id="edit-name-11" name="iitk_username" maxlength="60">
+				        </div>
+						<div id="edit-pass-11-wrapper" class="form-item">
+							<input type="password" class="form-text required input" size="17" maxlength="60" id="edit-pass-11" name="iitk_password">
+			            </div>
+						<input type="image" src="{{STATIC_URL}}go-button.gif" class="form-submit" id="edit-submit-11" name="submit">
+			        </div>
+		        </form>
+			    </span>
+				</div>
+											
+
+			 <span class="link"> Help </span> <span class="link">About Us</span></div>
+
+		</div>
+		<img src="{{STATIC_URL}}bazaar.png" width="900" height="350" style="margin-left:50px;"/>
+		<div class="bottom_div">
+			<img src="{{STATIC_URL}}logo.png"	width="200" height="50" id="bottom_div_img" />
+			<span id="bottom_div_span"> <a href="/campusdeal/" class="bottom_div_link">Home</a> | <a href="aboutus.html"class="bottom_div_link">About Us</a></span>
+		</div>
+	</div>
+</body>
+</html>

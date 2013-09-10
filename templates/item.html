@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>IITK Bazaar</title>
+	<link href="css/stylesheet.css" rel="stylesheet" type="text/css" />
+	<link href="css/item.css" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="logo_small.png" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.js"></script>
+</head>
+<body>
+	<script type="text/javascript" src="css/item.js"></script>
+	<div id="main_container">
+		<div id="top_div">
+			<div id="name"><img src="logo.png" width="200" height="50"/></div>
+			<div id="links"> <span class="link"> Home </span> <span class="link"> Login </span> <span class="link"> Help </span> <span class="link">About Us</span></div>
+		</div>
+		<img src="bazaar.png" width="900" height="350" style="margin-left:50px;"/>
+		<div id="middle_div">
+			<div id="recent_activity">
+				<div id="recent_activity_title">Hero Cycle [By : <span class="user" id="abhash">Abhash Anand</span>]</div>
+				<img src="cycle.jpg" id="item_itemimage" orderid="cycle">
+				
+				<div id="item_itemdescription">
+					The cycle is in a very good condition. Please buy!.. ............................. ................................
+				</div>
+			</div>
+			<div id="bid">
+				<form action="update" method="post" name="place_bid">
+					<span class="start_bid">Start Bid : Rs. 230</span>
+					<label for="mybid" class="start_bid">	Place Bid : </label>
+					<input type="text" id="mybid" name="mybid" size="5" />
+					<input type="button" id="submit" value="Submit/Update" />
+					<span class="start_bid" id="result"></span>
+				</form>
+			</div>
+		</div>	
+		<div class="bottom_div">
+			<img src="logo.png"	width="200" height="50" id="bottom_div_img" />
+			<span id="bottom_div_span"> <a href="index.html" class="bottom_div_link">Home</a> | <a href="aboutus.html"class="bottom_div_link">About Us</a></span>
+		</div>
+	</div>
+</body>
+</html>

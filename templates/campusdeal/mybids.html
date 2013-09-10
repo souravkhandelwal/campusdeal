@@ -1,0 +1,58 @@
+<html>
+<head>
+        <title>IITK Bazaar</title>
+        <link href="{{ STATIC_URL }}css/stylesheet.css" rel="stylesheet" type="text/css" />
+        <link href="{{ STATIC_URL }}css/register.css" rel="stylesheet" type="text/css" />
+        <link href="{{ STATIC_URL }}css/item.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="{{ STATIC_URL }}logo_small.png" />
+</head>
+<body>
+		<script type="text/javascript" src="{{STATIC_URL}}css/userinfo.js"></script>
+		<div id="main_container">
+			<div id="top_div">
+				<div id="name"><img src="{{STATIC_URL}}logo.png" width="200" height="50"/></div>
+				<div id="links"> <span class="link"> <a href="/campusdeal/home" style="text-decoration:none">Home</a> </span> <span class="link"> <a href="/campusdeal/myitems/static" style="text-decoration:none">My Items</a> </span><span class="link"><a href="/campusdeal/mybids" style="text-decoration:none">Bidded Items</a> </span><span class="link"> <a href="/campusdeal/logout/" style="text-decoration:none">Logout</a></span> </div>
+			</div>
+			<img src="{{STATIC_URL}}bazaar.png" width="900" height="350" style="margin-left:50px;"/>
+			<div id="middle_div">
+				<div id="recent_activity"> <!--recent activity-->
+					<div id="recent_activity_title">Recent Bids</div>
+
+					{% for bid in bids%}
+                        <div class="item">
+							<div class="item_image"><img src="{{bid.item.image.name }}" width="100" height="100"></div>
+							<div class="item_rest">
+								<div class="item_title"><a href="/campusdeal/item/{{bid.item.id}}/">{{bid.item.title}} </a><span class="item_baseprice">BasePrice :{{bid.item.price}}</span></div>
+								<div class="item_category">
+									<span class="bold">Category</span> : {{bid.item.category}}</div>
+								<div class="item_desc">
+									<span class="bold">Description</span> {{bid.item.description}}</div>
+                                <div class="item_desc">
+									<span class="bold">Status</span> {{bid.item.status}}</div>
+                                <div class="item_desc">
+									<span class="bold">My Bid</span> {{bid.bid}}</div>
+								
+                                <form action = "/campusdeal/remove_bid/{{bid.id}}/" method ="post">
+                                {% csrf_token %}
+                                <input type = "submit" class = "submit" value="Remove">
+                                </form>
+							</div>
+						</div>
+                		<div class="line"> <hr /> </div>
+					{% endfor %}
+			<div style="float:right"> <form action="/campusdeal/next_recent/" method="post" style="display:block; float:right;"> 
+			{% csrf_token %}
+			<input type="submit" class="submit" value="Next"> </form> 
+			
+			<form action="/campusdeal/previous_recent/" method="post" style="display:block; float:right;">
+			{% csrf_token %}
+			<input type="submit" class="submit" value="Previous" style="display:block"></form></div>
+			</div>
+			<div class="bottom_div">
+					<img src="{{STATIC_URL}}logo.png"	width="200" height="50" id="bottom_div_img" />
+					<span id="bottom_div_span"> <a href="index.html" class="bottom_div_link">Home</a> | <a href="aboutus.html"class="bottom_div_link">About Us</a></span>
+			</div>
+
+</div>
+</body>
+</html>

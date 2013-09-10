@@ -1,0 +1,87 @@
+<html>
+<head>
+	<title>IITK Bazaar</title>
+	<link href="css/stylesheet.css" rel="stylesheet" type="text/css" />
+	<link href="css/register.css" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="logo_small.png" />
+</head>
+<body>
+	<div id="main_container">
+		<div id="top_div">
+			<div id="name"><img src="logo.png" width="200" height="50"/></div>
+			<div id="links"> <span class="link"> Home </span> <span class="link"> Login </span> <span class="link"> Help </span> <span class="link">About Us</span></div>
+		</div>
+		<img src="bazaar.png" width="900" height="350" style="margin-left:50px;"/>
+		<div id="middle_div">
+			<div id="recent_activity"> <!--recent activity-->
+				<div id="recent_activity_title">Register</div>
+				<div id="registration_form">
+					<form action="register"	method="post" name="request">
+						<label for="iitk_username">IITK Username </label>
+						<input type="text" id="iitk_username" name="iitk_username" /> <br />
+						<label for="iitk_password">IITK Password </label>
+						<input type="password" id="iitk_password" name="iitk_password" /> <span style="font-size:13px">(We do not save your password!) </span><br />
+						<label for="full_name">Full Name </label>
+						<input type="text" id="full_name" name="full_name" /> <br />
+						<label for="sex">Sex </label>
+						<input type="radio" id="sex" name="sex" value="male"/> Male
+						<input type="radio" id="sex" name="sex" value="female"/> Female <br />
+						<label for="rollno">RollNo </label>
+						<input type="text" id="rollno" name="rollno"/> <br />
+						<label for="ask"> Are you a student ? </label>
+						<input type="radio" id="ask" name="ask" value="Yes"> Yes 
+						<input type="radio" id="ask" name="ask" value="No"> No <br />
+						<label for="student_hall"> Address </label>
+						<select size="1" id="student_hall" name="student_hall" style="float:left;margin-right:20px">
+							<option value="hall1">Hall 1</option>
+							<option value="hall2">Hall 2</option>
+							<option value="hall3">Hall 3</option>
+							<option value="hall4">Hall 4</option>
+							<option value="hall5">Hall 5</option>
+							<option value="hall6">Hall 6</option>
+							<option value="hall7">Hall 7</option>
+							<option value="hall8">Hall 8</option>
+							<option value="hall9">Hall 9</option>
+							<option value="hall10">Hall 10</option>
+							<option value="newgh">New GH</option>
+							<option value="oldrah">Old RAH</option>
+							<option value="newrah">New RAH</option>
+							<option value="sbra1hostel">SBRA-1 Hostel</option>
+							<option value="sbra2hostel">SBRA-2 Hostel</option>
+							<option value="newsbra">NEW SBRA</option>
+							<option value="visitorhostel">Visitor Hostel</option>
+						</select>
+						<label for="student_roomno"> Room No </label>
+						<input type="text" id="student_roomno" name="student_roomno" style="margin-left:-70px;"/> <br />
+						<label for="other_type"> Address </label>
+						<select size="1" id="other_type" name="other_type" style="float:left;margin-right:20px">
+							<option value="houseno301-396">House No 301-396</option>
+							<option value="houseno3001-3074">House No 3001-3074</option>
+							<option value="houseno401-498">House No 401-498</option>
+							<option value="houseno4001-4098">House No 4001-4098</option>
+							<option value="houseno501-520">House No 501-520</option>
+							<option value="houseno601-672">House No 601-672</option>
+							<option value="houseno2057-2098">House No 2057-2098</option>
+						</select>
+						<label for="other_roomno"> Room No </label>
+						<input type="text" id="other_roomno" name="other_roomno" style="margin-left:-70px;"/> <br />
+						<label for="department"> Department </label>
+						<select size="1" id="department" name="department">
+							<OPTION VALUE=AE>AE</OPTION><OPTION VALUE=BSBE>BSBE</OPTION><OPTION VALUE=CE>CE</OPTION><OPTION VALUE=CHE>CHE</OPTION><OPTION VALUE=CHM>CHM</OPTION><OPTION VALUE=CSE>CSE</OPTION><OPTION VALUE=ECO>ECO</OPTION><OPTION VALUE=EE>EE</OPTION><OPTION VALUE=ME>ME</OPTION><OPTION VALUE=MME>MME</OPTION><OPTION VALUE=MSE>MSE</OPTION><OPTION VALUE=MTH>MTH</OPTION><OPTION VALUE=PHY>PHY</OPTION><OPTION VALUE=STA>STA</OPTION>
+						</select> <br />
+						<label for="phoneno"> Phone Number </label>
+						<input type="text" id="phoneno" name="phoneno"> <br />
+						<div id="error_msg">Username or Password Incorrect!</div>
+						<input type="submit" value="Submit" class="submit left_margin"/>
+						<input type="reset" value="Reset" class="submit"/>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="bottom_div">
+			<img src="logo.png"	width="200" height="50" id="bottom_div_img" />
+			<span id="bottom_div_span"> <a href="index.html" class="bottom_div_link">Home</a> | <a href="aboutus.html"class="bottom_div_link">About Us</a></span>
+		</div>
+	</div>
+</body>
+</html>

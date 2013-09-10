@@ -1,0 +1,139 @@
+<!--
+<h1>  Registration Page</h1>
+<form action="/campusdeal/reg_submit/" method="post">
+{% csrf_token %}
+    <input type="text" name="Name" id="Name"/>
+    <input type="submit" value="submit"/>
+</form>
+-->
+<head>
+	<title>IITK Bazaar</title>
+	<link href="{{ STATIC_URL }}css/stylesheet.css" rel="stylesheet" type="text/css" />
+	<link href="{{STATIC_URL}}css/login.css" rel="stylesheet" type="text/css" />
+	<link href="{{ STATIC_URL }}css/register.css" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="{{ STATIC_URL }}logo_small.png" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.js"></script>
+</head>
+<body>
+	<script type="text/javascript" src="{{STATIC_URL}}css/login.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}css/register.js"></script>
+	<div id="main_container">
+    <div id="top_div">
+			<div id="name"><img src="{{STATIC_URL}}logo.png" width="200" height="50"/></div>
+
+			<div id="links"> 
+			
+			<div id="login-button">
+				<span class="link login-link"> Login </span> 
+				<span class="login-box">
+				<form id="user-login-form" method="post" accept-charset="UTF-8" action="/campusdeal/home/">
+                {% csrf_token %}
+					<div>
+						<div class="login-label">
+							<span>Username (New User?<a href="/campusdeal/register/">Signup</a>&#41;</span><span>Password</span>
+				        </div>
+				        <div id="edit-name-11-wrapper" class="form-item">
+							<input type="text" class="form-text required input" value="" size="17" id="edit-name-11" name="iitk_username" maxlength="60">
+				        </div>
+						<div id="edit-pass-11-wrapper" class="form-item">
+							<input type="password" class="form-text required input" size="17" maxlength="60" id="edit-pass-11" name="iitk_password">
+			            </div>
+						<input type="image" src="{{STATIC_URL}}go-button.gif" class="form-submit" id="edit-submit-11" name="submit">
+			        </div>
+		        </form>
+			    </span>
+				</div>
+											
+
+			 <span class="link"> Help </span> <span class="link">About Us</span></div>
+
+		</div>
+		<img src="{{ STATIC_URL }}bazaar.png" width="900" height="350" style="margin-left:50px;"/>
+		<div id="middle_div">
+			<div id="recent_activity"> <!--recent activity-->
+				<div id="recent_activity_title">Register</div>
+				<div id="registration_form">
+					<form action="/campusdeal/reg_submit/" method="post">
+                    {% csrf_token %}
+						{% if err == "login_failure" %}
+							<div id="error_msg">Your Credentials does not match cclogin or password </div>
+						{% endif %}
+						{% if err == "not_registered" %}
+							<div id="error_msg">You have not registered. Please Register First </div>
+						{% endif %}
+                        {% if err == "invalid_details" %}
+							<div id="error_msg">Please Fill the form completely. </div>
+                        {% endif %}
+                        {% if err == "already_registered" %}
+							<div id="error_msg">You are already registered. </div>
+                        {% endif %}
+						<label for="iitk_username">IITK Username </label>
+						<input type="text" id="iitk_username" name="iitk_username" /> <br />
+						<label for="iitk_password">IITK Password </label>
+						<input type="password" id="iitk_password" name="iitk_password" /> <span style="font-size:13px">(We do not save your password!) </span><br />
+						<label for="full_name">Full Name </label>
+						<input type="text" id="full_name" name="full_name" /> <br />
+						<label for="sex">Sex </label>
+						<input type="radio" id="sex" name="sex" value="M"/> Male
+						<input type="radio" id="sex" name="sex" value="F"/> Female <br />
+						<label for="rollno">RollNo </label>
+						<input type="text" id="rollno" name="rollno"/> <br />
+						<label for="ask"> Are you a student ? </label>
+						<input type="radio" id="ask" name="ask" value="Y"> Yes 
+						<input type="radio" id="ask" name="ask" value="N"> No <br />
+                        <div id="student">
+						<label for="student_hall"> Address </label>
+						<select size="1" id="student_hall" name="student_hall" style="float:left;margin-right:20px">
+							<option value="hall1">Hall 1</option>
+							<option value="hall2">Hall 2</option>
+							<option value="hall3">Hall 3</option>
+							<option value="hall4">Hall 4</option>
+							<option value="hall5">Hall 5</option>
+							<option value="hall6">Hall 6</option>
+							<option value="hall7">Hall 7</option>
+							<option value="hall8">Hall 8</option>
+							<option value="hall9">Hall 9</option>
+							<option value="hall10">Hall 10</option>
+							<option value="newgh">New GH</option>
+							<option value="oldrah">Old RAH</option>
+							<option value="newrah">New RAH</option>
+							<option value="sbra1hostel">SBRA-1 Hostel</option>
+							<option value="sbra2hostel">SBRA-2 Hostel</option>
+							<option value="newsbra">NEW SBRA</option>
+							<option value="visitorhostel">Visitor Hostel</option>
+						</select>
+						<label for="student_roomno"> Room No </label>
+						<input type="text" id="student_roomno" name="student_roomno" style="margin-left:-70px;"/> <br />
+                        </div>
+                        <div id="faculty">
+						<label for="other_type"> Address </label>
+						<select size="1" id="other_type" name="other_type" style="float:left;margin-right:20px">
+							<option value="houseno301-396">House No 301-396</option>
+							<option value="houseno3001-3074">House No 3001-3074</option>
+							<option value="houseno401-498">House No 401-498</option>
+							<option value="houseno4001-4098">House No 4001-4098</option>
+							<option value="houseno501-520">House No 501-520</option>
+							<option value="houseno601-672">House No 601-672</option>
+							<option value="houseno2057-2098">House No 2057-2098</option>
+						</select>
+						<label for="other_roomno"> Room No </label>
+						<input type="text" id="other_roomno" name="other_roomno" style="margin-left:-70px;"/> <br />
+                        </div>
+						<label for="department"> Department </label>
+						<select size="1" id="department" name="department">
+							<OPTION VALUE=AE>AE</OPTION><OPTION VALUE=BSBE>BSBE</OPTION><OPTION VALUE=CE>CE</OPTION><OPTION VALUE=CHE>CHE</OPTION><OPTION VALUE=CHM>CHM</OPTION><OPTION VALUE=CSE>CSE</OPTION><OPTION VALUE=ECO>ECO</OPTION><OPTION VALUE=EE>EE</OPTION><OPTION VALUE=ME>ME</OPTION><OPTION VALUE=MME>MME</OPTION><OPTION VALUE=MSE>MSE</OPTION><OPTION VALUE=MTH>MTH</OPTION><OPTION VALUE=PHY>PHY</OPTION><OPTION VALUE=STA>STA</OPTION>
+						</select> <br />
+						<label for="phoneno"> Phone Number </label>
+						<input type="text" id="phoneno" name="phoneno"> <br />
+						<input type="submit" value="Submit" class="submit left_margin"/>
+						<input type="reset" value="Reset" class="submit"/>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="bottom_div">
+			<img src="{{ STATIC_URL }}logo.png"	width="200" height="50" id="bottom_div_img" />
+			<span id="bottom_div_span"> <a href="index.html" class="bottom_div_link">Home</a> | <a href="aboutus.html"class="bottom_div_link">About Us</a></span>
+		</div>
+	</div>
+</body>

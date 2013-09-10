@@ -1,0 +1,44 @@
+label {
+	float:left;
+	margin-right:10px;
+	display:block;
+	width:200px;
+}
+
+#registration_form {
+	margin-left:20px;
+	margin-right:20px;
+	font-size:20px;
+}
+
+.left_margin {
+	margin-left:210px;
+}
+
+
+.submit {
+	font-size:20px;
+	padding:6px;
+	background-color:#006295;
+	color:#FFF;
+	border:#006295 1px outset;
+	margin-top:10px;
+	border-radius:6px;
+}
+
+.top_border {
+	border-top:#006295 3px solid;
+	border-bottom:none;
+	border-right:none;
+	border-left:none;
+	padding-bottom:20px;
+}
+
+.form_heading {
+	padding:2px;
+	font-size:20px;
+}
+
+#error_msg {
+	color:red;
+}

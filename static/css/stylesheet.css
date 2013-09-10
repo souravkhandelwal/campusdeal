@@ -1,0 +1,134 @@
+body {
+	background-color:#A0A0A0;
+	margin:0px auto;
+}
+
+#main_container {
+	width:1000px;
+	background-color:#FFFFFF;
+	margin:auto;
+	font-family:"lucidia grande";
+	overflow:hidden;
+	padding-bottom:20px;
+}
+
+#top_div {
+	padding:30px 20px 6px 20px;
+	margin-left:20px;
+	margin-right:20px;
+	border-bottom:#EEE 3px solid;
+	overflow:hidden;
+}
+
+#name {
+	font-size:30px;
+	padding-left:10px;
+	padding-bottom:1px;
+	float:left;
+}
+
+#links {
+	font-size:25px;
+	padding-top:20px;
+	float:right;
+	font-variant:small-caps;
+	color:#5895BE;
+	font-weight:bold;
+}
+
+.link {
+	padding-left:10px;
+	padding-right:10px;
+	border-radius:6px;
+}
+
+#middle_div {
+	border-top:#EEE 3px solid;
+	margin-left:20px;
+	margin-top:20px;
+	margin-right:20px;
+	overflow:hidden;
+}
+
+#recent_activity {
+	border-radius:6px;
+	border:#EEE 3px solid;
+	margin-top:20px;
+	float:left;
+	width:954px;
+	overflow:hidden;
+}
+
+#recent_activity_title {
+	font-size:30px;
+	color:#2860DE;
+	margin:10px;
+	font-variant:small-caps;
+	border-bottom:#EEE 3px solid;
+}
+
+.item {
+	overflow:hidden;
+	margin:10px;
+	padding:10px;
+}
+
+.item_image {
+	float:left;
+	border-right:#EEE 3px solid;
+	padding-right:10px;
+}
+
+.item_rest {
+	padding-left:10px;
+	float:left;
+	width:764px;
+}
+
+.item_title {
+	font-size:20px;
+	color:#000;
+	font-weight:bold;
+	border-bottom:#EEE 3px solid;
+}
+
+.item_baseprice {
+	font-size:20px;
+	font-variant:small-caps;
+	font-weight:bold;
+	float:right;
+}
+
+.line {
+	margin:10px;
+}
+
+.bold {
+	font-weight:bold;
+}
+
+.description {
+	text-align:justify;
+}
+
+.bottom_div {
+	border-top:#EEE 3px solid;
+	margin-top:20px;
+	margin-left:20px;
+	margin-right:20px;
+	padding-left:20px;
+}
+
+#bottom_div_img {
+	float:left;
+}
+
+#bottom_div_span {
+	float:right;
+	margin-top:20px;
+	margin-right:20px;
+}
+
+.bottom_div_link {
+	text-decoration:none;
+}

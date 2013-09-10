@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>IITK Bazaar</title>
+		<link href="{{ STATIC_URL }}css/stylesheet.css" rel="stylesheet" type="text/css" />
+		<link href="{{ STATIC_URL }}css/register.css" rel="stylesheet" type="text/css" />
+		<link href="{{ STATIC_URL }}css/item.css" rel="stylesheet" type="text/css" />
+		<link rel="shortcut icon" href="{{ STATIC_URL }}logo_small.png" />
+	</head>
+	<body>
+		<div id="main_container">
+			<div id="top_div">
+				<div id="name"><img src="{{ STATIC_URL }}logo.png" width="200" height="50"/></div>
+				<div id="links"> <span class="link"> <a href="/campusdeal/home" style="text-decoration:none">Home</a> </span> <span class="link"> <a href="/campusdeal/myitems/static" style="text-decoration:none">My Items</a> </span><span class="link"><a href="/campusdeal/mybids" style="text-decoration:none">Bidded Items</a> </span><span class="link"> <a href="/campusdeal/logout/" style="text-decoration:none">Logout</a></span> </div>
+			</div>
+			<img src="{{ STATIC_URL }}bazaar.png" width="900" height="350" style="margin-left:50px;"/>
+			<div id="middle_div">
+				<div id="recent_activity">
+					<div id="recent_activity_title">Add Item to Sell</div>
+					<div id="registration_form">
+                        {% if error %}
+                            <div id="error_msg">Please fill the form completely.</div>
+                        {% endif %}
+						<form action="/campusdeal/item_added/"	method="post" name="request" enctype="multipart/form-data">
+							{% csrf_token %}
+                            <label for="item_title">Item Title </label>
+							<input type="text" id="item_title" name="item_title" /> <br />
+							<label for="item_desc">Item Description </label>
+							<textarea id="item_desc" name="item_desc" cols="60" rows="8"i style="resize:none;"></textarea> <br />
+							<label for="min_bid">Minimum Bid </label>
+							<input type="text" id="min_bid" name="min_bid" /> <br />
+							<label for="typeofitem">Type of Item </label>
+							<input type="radio" id="typeofitem" name="typeofitem" value="books"> Books 
+							<input type="radio" id="typeofitem" name="typeofitem" value="cycles"> Cycles
+							<input type="radio" id="typeofitem" name="typeofitem" value="coolers"> Coolers 
+							<input type="radio" id="typeofitem" name="typeofitem" value="electronics"> Electronics 
+							<input type="radio" id="typeofitem" name="typeofitem" value="tickets"> Tickets
+							<input type="radio" id="typeofitem" name="typeofitem" value="others"> Others <br />
+							<label for="itemimage">Upload Image </label> 
+							<input type="file" name="itemimage" id="itemimage" /> <br />
+							<input type="submit" value="Submit" class="submit left_margin"/>
+							<input type="reset" value="Reset" class="submit"/>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="bottom_div">
+			<img src="{{ STATIC_URL }}logo.png"	width="200" height="50" id="bottom_div_img" />
+			<span id="bottom_div_span"> <a href="index.html" class="bottom_div_link">Home</a> | <a href="aboutus.html"class="bottom_div_link">About Us</a></span>
+		</div>
+		</div>
+	</body>
+</html>

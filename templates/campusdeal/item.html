@@ -1,0 +1,45 @@
+<head>
+	<title>IITK Bazaar</title>
+	<link href="{{ STATIC_URL }}css/stylesheet.css" rel="stylesheet" type="text/css" />
+	<link href="{{ STATIC_URL }}css/item.css" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="{{ STATIC_URL }}logo_small.png" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.js"></script>
+</head>
+<body>
+	<script type="text/javascript" src="{{ STATIC_URL }}css/userinfo.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}css/item.js"></script>
+	<div id="main_container">
+		<div id="top_div">
+			<div id="name"><img src="{{ STATIC_URL }}logo.png" width="200" height="50"/></div>
+			<div id="links"> <span class="link"> <a href="/campusdeal/home" style="text-decoration:none">Home</a> </span> <span class="link"> <a href="/campusdeal/myitems/static" style="text-decoration:none">My Items</a> </span><span class="link"><a href="/campusdeal/mybids" style="text-decoration:none">Bidded Items</a> </span><span class="link"> <a href="/campusdeal/logout/" style="text-decoration:none">Logout</a></span> </div>
+		</div>
+		<img src="{{ STATIC_URL }}bazaar.png" width="900" height="350" style="margin-left:50px;"/>
+		<div id="middle_div">
+			<div id="recent_activity">
+				<div id="recent_activity_title">{{item.title}} [By : <span class="user" id="{{item.sellerID.id}}">{{item.sellerID.name}}</span>]</div>
+				<img src="{{item.image.name}}" id="item_itemimage" orderid="{{item.id}}" width="400px" height="400px">
+				<div id="item_itemdescription">
+					{{item.description}}
+				</div>
+			</div>
+			<div id="bid">
+                <form action="/campusdeal/updateBidder/{{item.id}}/" method="post" name="place_bid">
+				{% csrf_token %}	
+					<span class="start_bid">Start Bid : Rs. {{item.price}}</span>
+					<label for="mybid" class="start_bid">	Place Bid : </label>
+					<input type="text" id="mybid" name="mybid" size="5" />
+					<input type="button" id="submit" value="Submit/Update" />
+                    {% if prev_bid %}
+                        <span class="start_bid" id="result">Previous Bid : {{previousBid}}</span>
+                    {% else %}
+                        <span class="start_bid" id="result"></span>
+                    {% endif %}
+				</form>
+			</div>
+		</div>	
+		<div class="bottom_div">
+			<img src="{{ STATIC_URL }}logo.png"	width="200" height="50" id="bottom_div_img" />
+			<span id="bottom_div_span"> <a href="index.html" class="bottom_div_link">Home</a> | <a href="aboutus.html"class="bottom_div_link">About Us</a></span>
+		</div>
+	</div>
+</body>

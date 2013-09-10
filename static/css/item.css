@@ -1,0 +1,40 @@
+#item_itemimage {
+	display:block;
+	margin:auto;
+}
+
+#item_itemdescription {
+	margin:10px;
+}
+
+#bidsplaced_title {
+	font-size:30px;
+	color:#2860DE;
+	margin:10px;
+	font-variant:small-caps;
+	border-bottom:#EEE 3px solid;
+}
+
+#bid {
+	border-radius:6px;
+	border:#EEE 3px solid;
+	margin-top:20px;
+	padding-top:10px;
+	float:left;
+	width:954px;
+}
+
+.start_bid {
+	font-size:20px;
+	color:#006295;
+	padding-left:10px;
+	font-weight:bold;
+}
+
+#gap {
+	padding-left:100px;
+	float:left;
+	height:23px;
+	float:left;
+	display:block;
+}
